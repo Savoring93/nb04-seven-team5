@@ -63,7 +63,7 @@ model ExerciseRecord {
 }
 
 model ParticipantPhoto {
-  Id               Int            @id
+  id               Int            @id
   exerciseRecordId Int
   exerciseRecord   ExerciseRecord @relation(fields: [exerciseRecordId], references: [id], onDelete: Cascade)
   photoUrl         String         @unique
